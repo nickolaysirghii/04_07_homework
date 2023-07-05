@@ -8,19 +8,17 @@ const Users = () => {
  const dispatcher = useDispatch();
  const userState = useSelector((state)=>state.usData)
 
- useEffect(()=>{dispatcher(getUsers())},[]);
+ useEffect(()=>{
+  dispatcher(getUsers())
+  
+},[])
 
  const { usersData , errorMessage } = userState
 
- const checkFavorite = localStorage.getItem("favorite")
- const favoriteUsers = JSON.parse(checkFavorite)
-
-
- 
-
-
-
-  return (
+ if(errorMessage){
+  return <p>{errorMessage}</p>
+ }else{
+return (
     <div className='usersContainer'>
       {
         usersData.map((user,idx) =>{
@@ -29,6 +27,7 @@ const Users = () => {
       }
     </div>
   )
+}
 }
 
 export default Users

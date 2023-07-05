@@ -21,12 +21,7 @@ const UserItem = ({usName,usObj}) => {
     localStorage.setItem("favorites",JSON.stringify([usObj]));
     dispatcher(favoriteAction([usObj]))
    }
-
-
-   }
-
-   
-
+  };
   return (
     <div className='userItemContainer'>
         

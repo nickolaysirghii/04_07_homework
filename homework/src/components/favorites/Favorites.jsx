@@ -6,11 +6,9 @@ import { useSelector } from "react-redux"
 const Favorites = () => {
 
   const favorit22 = useSelector((state)=>state.favReducer);
-  
 
   
-
-  return (
+ return (
     <div className='favoritesContainer'>
      {
       favorit22.map((fav,idx)=>{

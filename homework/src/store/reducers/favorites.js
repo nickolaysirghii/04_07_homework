@@ -7,6 +7,6 @@ export const favoriteReducer = (state = dataPars , action) =>{
     if(action.type === CHANGE_FAVORITE){
         return [...action.payload]
     }else{
-        return [...state]
+        return []
     }
 }
